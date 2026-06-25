@@ -1,0 +1,44 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0a0a18"/>
+      <stop offset="1" stop-color="#0d0d1f"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(150 80) scale(520 420)">
+      <stop offset="0" stop-color="#6E56CF" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#6E56CF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1050 560) scale(480 380)">
+      <stop offset="0" stop-color="#2DD4BF" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#2DD4BF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="textGrad" x1="0" y1="0" x2="700" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#9f6ef5"/>
+      <stop offset="1" stop-color="#2DD4BF"/>
+    </linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#ffffff" stroke-opacity="0.035" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <rect width="1200" height="630" fill="url(#glow1)"/>
+  <rect width="1200" height="630" fill="url(#glow2)"/>
+
+  <rect x="80" y="80" width="64" height="64" rx="14" fill="#13132a" stroke="url(#textGrad)" stroke-width="1.5" stroke-opacity="0.6"/>
+  <text x="112" y="123" font-family="JetBrains Mono, monospace" font-size="26" fill="#9f6ef5" text-anchor="middle">&lt;/&gt;</text>
+
+  <text x="80" y="240" font-family="Inter, sans-serif" font-size="22" letter-spacing="3" fill="#2DD4BF" font-weight="600">CODEWITHHAYEE</text>
+
+  <text x="78" y="320" font-family="Inter, sans-serif" font-size="64" font-weight="800" fill="#f8fafc">Abdullah Akinkunmi</text>
+  <text x="78" y="395" font-family="Inter, sans-serif" font-size="64" font-weight="800" fill="url(#textGrad)">Sheriff</text>
+
+  <text x="80" y="450" font-family="Inter, sans-serif" font-size="26" fill="#c4c4d4">Frontend Developer · Full Stack Software Engineer</text>
+
+  <text x="80" y="560" font-family="JetBrains Mono, monospace" font-size="18" fill="#6b6b8a">$ whoami</text>
+  <text x="230" y="560" font-family="JetBrains Mono, monospace" font-size="18" fill="#10b981">building from Ibadan, Nigeria — for the world</text>
+
+  <circle cx="1100" cy="100" r="5" fill="#10b981"/>
+  <text x="1080" y="105" font-family="JetBrains Mono, monospace" font-size="16" fill="#10b981" text-anchor="end">available</text>
+</svg>

@@ -1,0 +1,166 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scrollbar-gutter: stable;
+  }
+
+  body {
+    @apply bg-void text-text-primary font-body antialiased;
+    background-image: var(--bg-mesh);
+    background-attachment: fixed;
+  }
+
+  html.light body {
+    background-color: #fafaf8;
+  }
+
+  ::selection {
+    @apply bg-brand-violet/40 text-white;
+  }
+
+  :focus-visible {
+    outline: 2px solid #6E56CF;
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #232347;
+    border-radius: 8px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #6E56CF;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/[0.03] backdrop-blur-xl border border-white/[0.08];
+  }
+
+  html.light .glass {
+    @apply bg-black/[0.02] border-black/[0.06];
+  }
+
+  .glass-strong {
+    @apply bg-white/[0.06] backdrop-blur-2xl border border-white/[0.1];
+  }
+
+  html.light .glass-strong {
+    background-color: rgba(255, 255, 255, 0.65);
+    border-color: rgba(20, 19, 43, 0.08);
+  }
+
+  /* Theme-aware subtle overlay/border utilities — replace raw white-alpha
+     utilities wherever a control needs to read correctly in both themes. */
+  .veil-1 { background-color: rgba(255, 255, 255, 0.03); }
+  .veil-2 { background-color: rgba(255, 255, 255, 0.04); }
+  .veil-3 { background-color: rgba(255, 255, 255, 0.06); }
+  .veil-4 { background-color: rgba(255, 255, 255, 0.08); }
+  html.light .veil-1 { background-color: rgba(20, 19, 43, 0.03); }
+  html.light .veil-2 { background-color: rgba(20, 19, 43, 0.04); }
+  html.light .veil-3 { background-color: rgba(20, 19, 43, 0.05); }
+  html.light .veil-4 { background-color: rgba(20, 19, 43, 0.07); }
+
+  .hairline { border-color: rgba(255, 255, 255, 0.06); }
+  .hairline-strong { border-color: rgba(255, 255, 255, 0.1); }
+  html.light .hairline { border-color: rgba(20, 19, 43, 0.08); }
+  html.light .hairline-strong { border-color: rgba(20, 19, 43, 0.12); }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-brand-violet-light via-brand-violet to-brand-cyan-light;
+    background-size: 200% auto;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .noise {
+    position: relative;
+  }
+  .noise::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E");
+    opacity: 0.025;
+    pointer-events: none;
+    mix-blend-mode: overlay;
+  }
+
+  .terminal-prompt::before {
+    content: '$ ';
+    @apply text-brand-cyan-light;
+  }
+
+  .section-eyebrow {
+    @apply font-mono text-xs tracking-[0.15em] uppercase text-brand-cyan-light/90 inline-flex items-center gap-2;
+  }
+
+  .card-grid-bg {
+    background-image:
+      linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+
+  html.light .card-grid-bg {
+    background-image:
+      linear-gradient(rgba(20,19,43,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(20,19,43,0.04) 1px, transparent 1px);
+  }
+}
+
+:root {
+  --c-text-primary: #f8fafc;
+  --c-text-secondary: #c4c4d4;
+  --c-text-muted: #9594ab;
+  --c-text-accent: #9f6ef5;
+  --c-border: #1e1e40;
+  --c-border-light: #2a2a55;
+  --c-hover-veil: rgba(255, 255, 255, 0.07);
+
+  --bg-mesh: radial-gradient(at 30% 0%, hsla(258, 70%, 22%, 0.55) 0px, transparent 55%),
+    radial-gradient(at 85% 10%, hsla(178, 70%, 22%, 0.3) 0px, transparent 50%),
+    radial-gradient(at 10% 90%, hsla(258, 60%, 18%, 0.4) 0px, transparent 50%),
+    radial-gradient(at 90% 95%, hsla(35, 80%, 20%, 0.18) 0px, transparent 45%);
+}
+
+html.light {
+  --c-text-primary: #14132b;
+  --c-text-secondary: #3f3d5c;
+  --c-text-muted: #6b6985;
+  --c-text-accent: #6d3fd1;
+  --c-border: #e3e1f5;
+  --c-border-light: #d4d1ee;
+  --c-hover-veil: rgba(20, 19, 43, 0.05);
+
+  --bg-mesh: radial-gradient(at 30% 0%, hsla(258, 80%, 92%, 0.9) 0px, transparent 55%),
+    radial-gradient(at 85% 10%, hsla(178, 70%, 90%, 0.6) 0px, transparent 50%),
+    radial-gradient(at 10% 90%, hsla(258, 60%, 95%, 0.7) 0px, transparent 50%);
+}
+
