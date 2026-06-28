@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemap.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://codewithhayee.dev/</loc>
+    <loc>https://abdullahisheriff.name.ng/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://codewithhayee.dev/projects</loc>
+    <loc>https://abdullahisheriff.name.ng/projects</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://codewithhayee.dev/blog</loc>
+    <loc>https://abdullahisheriff.name.ng/blog</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://codewithhayee.dev/about</loc>
+    <loc>https://abdullahisheriff.name.ng/about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://codewithhayee.dev/contact</loc>
+    <loc>https://abdullahisheriff.name.ng/contact</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
