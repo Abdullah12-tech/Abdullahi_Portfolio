@@ -9,7 +9,7 @@ interface SEOProps {
   jsonLd?: Record<string, any>;
 }
 
-const SITE_URL = 'https://codewithhayee.dev';
+const SITE_URL = 'https://abdullahisheriff.name.ng';
 
 export function SEO({ title, description, path = '/', image = '/og-image.png', type = 'website', jsonLd }: SEOProps) {
   const url = `${SITE_URL}${path}`;

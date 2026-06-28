@@ -3,4 +3,4 @@ Allow: /
 Disallow: /admin
 Disallow: /*.json$
 
-Sitemap: https://codewithhayee.dev/sitemap.xml
+Sitemap: https://abdullahisheriff.name.ng/sitemap.xml
