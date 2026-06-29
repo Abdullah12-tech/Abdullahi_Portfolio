@@ -161,7 +161,7 @@ This project was built to:
 
 ## 📸 Live Demo
 
-[View Portfolio](https://your-portfolio-link.com)
+[View Portfolio](https://abdullahisheriff.name.ng)
 
 ## 🔧 Installation
 
@@ -189,16 +189,3 @@ Start the development server:
 npm run dev
 ```
 
-## 👨‍💻 Author
-
-### Abdullah Sheriff
-
-Full Stack Developer passionate about building scalable, user-focused applications and solving real-world problems through technology.
-
-* GitHub: https://github.com/abdullah12-tech
-* LinkedIn: https://linkedin.com/in/abdullahi-sheriff-2669b03a8
-* Portfolio: https://abdullah-professional-portfolio.vercel.app
-
-## 📄 License
-
-This project is licensed under the MIT License.
